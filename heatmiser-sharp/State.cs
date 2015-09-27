@@ -9,8 +9,8 @@ namespace heatmiser_sharp
     {
         public Decimal TempActual { get; set; }
         public Decimal TempSetting { get; set; }
-        public Boolean IsHeatingOn { get; set; }
-        public Boolean IsWaterOn { get; set; }
+        public bool IsHeatingOn { get; set; }
+        public bool IsWaterOn { get; set; }
         public Uri BaseEndpointAddress { get; set; }
 
         private HttpClient client = new HttpClient();
