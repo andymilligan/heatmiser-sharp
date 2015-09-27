@@ -8,8 +8,11 @@ namespace heatmiser_sharp
 {
     public interface IState
     {
-        void Set(int temp);
-        void SetHotWater(bool waterState);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="waterState"></param>
+        void SetWater(bool waterOn);
 
         /// <summary>
         /// Set the heating temperature for a fixed duration or until the next until the next programmed time.
@@ -19,5 +22,6 @@ namespace heatmiser_sharp
         /// <param name="minutes"></param>
         void SetHeating(int temp, int? hours = null, int? minutes = null);
 
+        void ReadState();
     }
 }

@@ -17,25 +17,12 @@ namespace heatmiser_sharp.UnitTests
             Assert.IsNotNull(state.TempSetting);
         }
 
-
-        [TestMethod]
-        public void SetState()
-        {
-            heatmiser_sharp.State state = new State();
-            state.Set(23);
-
-            Assert.IsNotNull(state.TempActual);
-            Assert.IsNotNull(state.TempSetting);
-        }
-
         [TestMethod]
         public void SetHotWater()
         {
             heatmiser_sharp.State state = new State();
-            state.SetHotWater(false);
-
-            Assert.IsNotNull(state.TempActual);
-            Assert.IsNotNull(state.TempSetting);
+            state.SetWater(false);
+            
         }
 
         [TestMethod]
@@ -44,9 +31,15 @@ namespace heatmiser_sharp.UnitTests
             heatmiser_sharp.State state = new State();
             state.SetHeating(18);
 
+        }
 
-            Assert.IsNotNull(state.TempActual);
-            Assert.IsNotNull(state.TempSetting);
+
+        [TestMethod]
+        public void SetHeatingDuration()
+        {
+            heatmiser_sharp.State state = new State();
+            state.SetHeating(16,2,22);
+            
         }
 
     }
