@@ -12,6 +12,7 @@ namespace heatmiser_sharp
         /// Reads the temperatures and settings
         /// </summary>
         void ReadState();
+
         /// <summary>
         /// Sets the hot water state
         /// </summary>

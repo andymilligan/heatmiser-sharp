@@ -13,6 +13,7 @@ namespace heatmiser_sharp.UnitTests
         {
             heatmiser_sharp.State state = new State();
 
+            state.ReadState();
             Assert.IsNotNull(state.TempActual);
             Assert.IsNotNull(state.TempSetting);
         }
